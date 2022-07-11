@@ -49,6 +49,7 @@ body {
 #navigation > li > a {
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
 } 
 #navigation li a {
     display: inline-block;
@@ -81,6 +82,7 @@ body {
     color: black;
 }
 #gallery {
+    position: relative;
     height: 450px;
     padding: 20px;
     background-color: rgb(210, 72, 95);
@@ -93,6 +95,7 @@ body {
 }
 .gallery-item1:hover, .gallery-item2:hover, .gallery-item3:hover, .gallery-item4:hover, .gallery-item5:hover, .gallery-item6:hover, .gl1:hover, .gl2:hover, .gl3:hover {
     opacity: 0.5;
+    transform: scale(1.1);
 }
 .gallery-item1 {
     grid-column: 3/ 3;
@@ -173,3 +176,50 @@ ul#countdown li {
         font-size: 1.5vw;
         text-transform: uppercase;
       }
+#information {
+    position: relative;
+    height: 200px;
+    background-color: rgb(178, 39, 62);
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(1, 200px);
+    grid-gap: 10px;
+    margin: auto;
+    align-items: center;
+    justify-content: center; /* center the grid */
+}
+#information .huy, #information .uyen {
+    padding-left:10px   ;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    min-width: 100px;
+}
+.heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+  }
+  .heart:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }
+  
