@@ -7,6 +7,8 @@
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta property="og:title" content="Hello =)))" />
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/login.css" />
+    <script src="./js/login.js"></script>
     <script
       src="https://kit.fontawesome.com/37cc4dd05e.js"
       crossorigin="anonymous"
@@ -19,7 +21,7 @@
       <div id="header">
         <h1 style="color: #fff; font-size:20px">Welcome</h1>
         <div class="login">
-          <a href="login.html">
+          <a class="btn-login js-btn-login">
             <i class="fa-solid fa-user"></i>
             Login
           </a>
@@ -38,5 +40,44 @@
         Huy Bui
       </p>
     </div>
+    <div class="modal">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input id="username" type="text" name="" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input id="password" type="password" name="" required="">
+            <label>Password</label>
+          </div>
+            <!-- if username and password are correct then login success else login fail -->
+          <a onclick="validate()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+    </div>
   </body>
+  <script>
+    const login = document.querySelector('.js-btn-login');
+    const modal = document.querySelector('.modal');
+    const xxx = document.querySelector('.login-box');
+    modal.addEventListener('click',hideModal);
+    xxx.addEventListener('click',function(event){
+      event.stopPropagation();
+    });
+    login.addEventListener("click", displayLogin);
+    function displayLogin(){
+    modal.classList.add('open');    
+  }
+  function hideModal(){
+    modal.classList.remove('open');
+  }
+  </script>
 </html>

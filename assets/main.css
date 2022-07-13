@@ -11,6 +11,9 @@ html {
 body {
     background-color: pink;
 }
+.clear {
+    clear: both;
+}
 #header {
     height: 50px;
     background-color: rgb(178, 39, 62);
@@ -248,6 +251,7 @@ ul#countdown li {
     padding-top: 50%;
     background: url("https://i.pinimg.com/originals/76/31/61/7631615ffece7d31602021ea3615c3d7.gif") no-repeat top center/cover;;   
 }
+/* make img full background  */
 #slider .text-content {
     position: absolute;
     bottom: 25px;
