@@ -1,6 +1,6 @@
 window.onload=function() {
     // Month,Day,Year,Hour,Minute,Second
-    downTime('nov,27,2021,01:00:00');
+    downTime('nov,27,2021,01:01:01');
   }
   function downTime(targetDate) {
     now = new Date();
