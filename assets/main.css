@@ -25,6 +25,9 @@ body {
     justify-content: space-around;
     margin: auto;
     /* position: fixed; */
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 #main {
     display: flex;
@@ -43,6 +46,7 @@ body {
     font-weight: bold;
     color: white;
     margin: auto;
+    padding-top: 60px;
 }
 #navigation {
     display:inline-block;
@@ -51,6 +55,7 @@ body {
     list-style: none;
 }
 #navigation li {
+    z-index: 999;
     display: inline-block;
     position: relative;
 }
@@ -159,7 +164,7 @@ ul#countdown {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     padding: 15px 0 20px 0;
     color: #fff;
