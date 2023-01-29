@@ -20,15 +20,14 @@ body {
 #header {
     height: 50px;
     background-color: rgb(178, 39, 62);
-    /* display in center */
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: auto;
-    /* position: fixed; */
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
 }
 #main {
     display: flex;
